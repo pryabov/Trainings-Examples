@@ -1,0 +1,17 @@
+﻿@model WorkWithHtmlHelpers.Models.StandartHtmlHelpers.StrongDataModel
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Strong Bounded Html Helpers</title>
+		<style>
+			.my-css-class {
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		@Html.TextBoxFor(x => x.Name, new {@class = "my-css-class", customAttribute = "custom", style="color:green;"})
+	</body>
+</html>

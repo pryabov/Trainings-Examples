@@ -1,0 +1,39 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+	<legend>Custom Html Helpers</legend>
+	<ul>
+		<li>@Html.ActionLink("Before Inline HTML Helpers", "InlineHtmlHelper1", "CustomHtmlHelpers")</li>
+		<li>@Html.ActionLink("Inline HTML Helpers", "InlineHtmlHelper2", "CustomHtmlHelpers")</li>
+		<li>@Html.ActionLink("External Html Helper", "ExternalHtmlHelper1", "CustomHtmlHelpers")</li>
+		<li>@Html.ActionLink("Declarative Html Helper", "ExternalHtmlHelper2", "CustomHtmlHelpers")</li>
+	</ul>
+</fieldset>
+
+<fieldset>
+	<legend>Standart Html Helpers</legend>
+	<ul>
+		<li>@Html.ActionLink("Create Form", "CreateForm", "StandartHtmlHelpers")</li>
+		<li>@Html.ActionLink("DataInputs", "DataInput", "StandartHtmlHelpers")</li>
+		<li>@Html.ActionLink("Strong DataInputs", "StrongDataInput", "StandartHtmlHelpers")</li>
+		<li>@Html.ActionLink("Strong DataInputs with Attributes", "StrongDataInputWithAttributes", "StandartHtmlHelpers")</li>
+	</ul>
+</fieldset>
+
+<fieldset>
+	<legend>Links</legend>
+	<ul>
+		<li>@Html.ActionLink("Links", "Index", "Link")</li>
+	</ul>
+</fieldset>
+
+<fieldset>
+	<legend>Editor</legend>
+	<ul>
+		<li>@Html.ActionLink("EditorFor", "EditorFor", "Editor")</li>
+		<li>@Html.ActionLink("EditorForModel", "EditorForModel", "Editor")</li>
+	</ul>
+</fieldset>

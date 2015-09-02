@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Data Inputs</title>
+	</head>
+	<body>
+		@Html.CheckBox("myCheckbox", false)
+		@Html.Hidden("myHidden", "val")
+		@Html.RadioButton("myRadiobutton", "val", true)
+		@Html.Password("myPassword", "val")
+		@Html.TextArea("myTextarea", "val", 5, 20, null)
+		@Html.TextBox("myTextbox", "val")
+		@Html.DropDownList("myList", new SelectList(new [] {"A", "B"}), "Choose")
+		@Html.ListBox("myList", new MultiSelectList(new [] {"A", "B"}))
+	</body>
+</html>

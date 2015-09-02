@@ -1,0 +1,19 @@
+﻿@model WorkWithHtmlHelpers.Models.StandartHtmlHelpers.StrongDataModel
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Strong Bounded Html Helpers</title>
+	</head>
+	<body>
+		@Html.CheckBoxFor(x => x.IsApproved)
+		@Html.HiddenFor(x => x.SomeProperty)
+		@Html.RadioButtonFor(x => x.RadioVal, "val")
+		@Html.PasswordFor(x => x.Password)
+		@Html.TextAreaFor(x => x.Bio, 5, 20, new{})
+		@Html.TextBoxFor(x => x.Name)
+		@Html.DropDownListFor(x => x.Gender, new SelectList(new [] {"M", "F"}))
+		@Html.ListBoxFor(x => x.Vals, new MultiSelectList(new [] {"A", "B"}))
+	</body>
+</html>

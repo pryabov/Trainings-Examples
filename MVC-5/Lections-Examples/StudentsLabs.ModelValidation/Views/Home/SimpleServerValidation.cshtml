@@ -1,0 +1,27 @@
+﻿@model StudentsLabs.ModelValidation.Models.Account.UserViewModel
+
+@{
+	ViewBag.Title = "Client Validation";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using(Html.BeginForm("SaveUser", "Account", new {autocomplete = "off"})){
+	<div>
+		First Name:
+		@Html.TextBoxFor(item => item.FirstName)
+	</div>
+	<div>
+		Last Name:
+		@Html.TextBoxFor(item => item.LastName)
+	</div>
+	<div>
+		Email:
+		@Html.TextBoxFor(item => item.Email)
+	</div>
+	<div>
+		Password:
+		@Html.PasswordFor(item => item.Password)
+	</div>
+
+	<input type="submit" value="Save" />
+}

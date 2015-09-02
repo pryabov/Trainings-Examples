@@ -1,0 +1,12 @@
+﻿@{
+	ViewBag.Title = "Links";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<img src="@Url.Content("~/Content/image.jpg")"/><br/>
+@Html.ActionLink("ActionLink", "Index", "Link")<br/>
+@Html.ActionLink("ActionLink", "Index", "Link", "https", "www.test.com", "anchor", new{}, null)<br/>
+<a href="@Url.Action("Index", "Link")">RouteUrl</a><br/>
+<a href="@Url.RouteUrl(new { controller = "Link", action = "Index" })">RouteUrl</a><br/>
+<a href="@Html.RouteLink("Hi", new { controller = "Link", action = "Index" }, null)">RouteLink</a><br/>
+@*@Html.RouteLink("Hi", "myNamedRoute", new {})*@

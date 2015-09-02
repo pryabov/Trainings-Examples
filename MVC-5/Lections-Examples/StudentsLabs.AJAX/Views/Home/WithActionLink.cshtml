@@ -1,0 +1,10 @@
+﻿@{
+	ViewBag.Title = "With ActionLink";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="update-container">
+	@Html.Partial("Controls/FirstPartial")
+</div>
+
+@Ajax.ActionLink("Change Partial", "GetSecondPartial", "Home", new { isFirstPartial = true }, new AjaxOptions { UpdateTargetId = "update-container" })

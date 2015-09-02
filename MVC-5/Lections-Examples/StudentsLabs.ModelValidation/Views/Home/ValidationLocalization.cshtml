@@ -1,0 +1,55 @@
+﻿@model StudentsLabs.ModelValidation.Models.Account.LocalizedUserViewModel
+
+@{
+	ViewBag.Title = "Client Validation";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/jquery-2.0.3.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+
+@using(Html.BeginForm("SaveUser", "Account", new {autocomplete = "off"})){
+	<div>
+		<div class="editor-label">
+			First Name:
+		</div>
+		<div class="editor-field">
+			@Html.TextBoxFor(item => item.FirstName)
+			@Html.ValidationMessageFor(item => item.FirstName)
+		</div>
+	</div>
+	<div>
+		<div class="editor-label">
+			Last Name:
+		</div>
+		<div class="editor-field">
+			@Html.TextBoxFor(item => item.LastName)
+			@Html.ValidationMessageFor(item => item.LastName)
+		</div>
+	</div>
+	<div>
+		<div class="editor-label">
+			Email:
+		</div>
+		<div class="editor-field">
+			@Html.TextBoxFor(item => item.Email)
+			@Html.ValidationMessageFor(item => item.Email)
+		</div>
+	</div>
+	<div>
+		<div class="editor-label">
+			Password:
+		</div>
+		<div class="editor-field">
+			@Html.PasswordFor(item => item.Password)
+			@Html.ValidationMessageFor(item => item.Password)
+		</div>
+	</div>
+	
+	@*<div>
+		@Html.ValidationSummary(false)
+	</div>*@
+
+	<input type="submit" value="Save" />
+}

@@ -1,0 +1,43 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+</head>
+<body>
+	@{
+		int[] array = { 1, 2, 3, 4 };
+		
+		foreach (int item in array)
+		{
+			@(string.Format("Item is {0}", item))
+			<br/>
+		}
+	}
+	
+	@*
+		Comment
+		Comment
+		Comment
+	*@
+	
+	@{
+		//Comment
+	}
+
+
+	@if (DateTime.Now.Year == 2013)
+	{
+		<text>Today is @DateTime.Now</text>
+	}
+	else
+	{
+		<p>Did you built time machine?</p>
+	}
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿@using WorkWithHtmlHelpers.Helpers.HtmlHelpers
+@model WorkWithHtmlHelpers.Models.CustomHtmlHelpers.ArrayModel
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>External Html Helper</title>
+	</head>
+	<body>
+		<div>
+			@Html.ListArrayitems(Model.Values)
+		</div>
+	</body>
+</html>

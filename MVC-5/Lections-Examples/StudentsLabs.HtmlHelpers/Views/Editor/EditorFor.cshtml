@@ -1,0 +1,13 @@
+﻿@{
+	ViewBag.Title = "Editor For";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model WorkWithHtmlHelpers.Models.Editor.EditorForModel
+
+@Html.EditorFor(item => item.StringField)
+@Html.EditorFor(item => item.PasswordField)
+@Html.EditorFor(item => item.NumericField)
+@Html.EditorFor(item => item.DateTime)
+
+@Html.EditorFor(item => item.StringField2)

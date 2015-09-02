@@ -1,0 +1,16 @@
+﻿@{
+	ViewBag.Title = "Not Used ActionLink";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/Custom/beforeActionLink.js")" type="text/javascript"></script>
+
+<script type="text/javascript">
+	beforeActionLink.partialRequestUrl = '@Url.Action("GetSecondPartial", "Home")';
+</script>
+
+<div id="update-container">
+	@Html.Partial("Controls/FirstPartial")
+</div>
+
+<a href="#" onclick="beforeActionLink.changePartial()">Change Partial</a>

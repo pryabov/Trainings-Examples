@@ -1,0 +1,20 @@
+﻿@* Can be skipped *@
+@using WorkWithModels.Models.Home
+@model dynamic
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Dynamic View Model</title>
+	</head>
+	<body>
+		<div>
+			@(((HomeModel)Model).Field1)
+			<br/>
+			@(((HomeModel)Model).Field2)
+			<br/>
+			@(((HomeModel)Model).Field3)
+		</div>
+	</body>
+</html>

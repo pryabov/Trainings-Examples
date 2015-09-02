@@ -1,0 +1,19 @@
+﻿@model WorkWithHtmlHelpers.Models.CustomHtmlHelpers.ArrayModel
+
+@helper ListArrayItems(string[] array)
+{
+	foreach (string item in Model.Values)
+	{
+		<text>@item &nbsp;</text>
+	}
+}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inline HTML Helpers</title>
+	</head>
+	<body>
+		@ListArrayItems(Model.Values)
+	</body>
+</html>

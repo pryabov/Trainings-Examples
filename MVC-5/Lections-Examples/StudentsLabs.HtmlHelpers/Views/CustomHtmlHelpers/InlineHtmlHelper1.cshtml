@@ -1,0 +1,15 @@
+﻿@model WorkWithHtmlHelpers.Models.CustomHtmlHelpers.ArrayModel
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Before Inline HTML Helpers</title>
+	</head>
+	<body>
+		@foreach (string item in Model.Values)
+		{
+			<text>@item &nbsp;</text>
+		}
+	</body>
+</html>

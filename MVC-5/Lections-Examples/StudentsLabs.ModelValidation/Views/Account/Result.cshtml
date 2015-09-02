@@ -1,0 +1,23 @@
+﻿@model StudentsLabs.ModelValidation.Models.Account.SaveResultViewModel
+
+@{
+	ViewBag.Title = "Saving Result";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.IsSuccess)
+{
+	<h2>Success</h2>
+	@Html.ActionLink("Home", "Index", "Home")
+}
+else
+{
+	<h2>Error</h2>
+	<ul>
+		@foreach (var error in Model.Errors)
+		{
+			<li>@error</li>
+		}
+	</ul>
+	@Html.ActionLink("Back", "SimpleServerValidation", "Home")
+}
